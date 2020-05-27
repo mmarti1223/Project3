@@ -3,18 +3,25 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./assets/css/main.css";
 
+import { AppContext, initialState } from "./utils";
 import Landing from "./components/Landing";
 
 export default class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {};
+  }
+
   render() {
     return (
-      <div className="app">
+      <AppContext.Provider value={initialState}>
         <Router>
           <Switch>
             <Route path="/" component={Landing} />
           </Switch>
         </Router>
-      </div>
+      </AppContext.Provider>
     );
   }
 }
