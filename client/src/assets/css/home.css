@@ -1,5 +1,6 @@
 .home {
   background-color: #f5f5f5;
+  min-height: 100vh;
   text-align: center;
 }
 
@@ -34,7 +35,7 @@
 }
 
 .home .animal-grid .animal-card {
-  margin: 5%;
+  margin: 6% 0;
 }
 
 .home .animal-grid .animal-card img {
@@ -42,4 +43,41 @@
   width: 130px;
   height: 130px;
   object-fit: cover;
+}
+
+@media only screen and (min-width: 550px) {
+  .home .animal-grid .animal-card img {
+    border-radius: 30px;
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .home .animal-grid .grid {
+    grid-template-columns: auto auto auto;
+    max-width: 768px;
+  }
+
+  .home .animal-grid .animal-card {
+    margin: 6%;
+  }
+
+  .home .animal-grid .animal-card img {
+    border-radius: 30px;
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .home .animal-grid .grid {
+    grid-template-columns: auto auto auto;
+  }
+
+  .home .animal-grid .animal-card img {
+    border-radius: 30px;
+    width: 200px;
+    height: 200px;
+  }
 }
