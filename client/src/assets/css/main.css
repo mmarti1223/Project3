@@ -20,16 +20,47 @@ h1 {
   transform: translate(-50%, -50%);
 }
 
-.red-bttn {
+.bttn {
   font-size: 20px;
   font-weight: semi-bold;
   color: #fff;
-  background-color: #ff4139;
   padding: 15px 30px;
   border-radius: 50px;
 }
 
-.red-bttn:hover {
+.bttn:hover {
   text-decoration: none;
   color: #fff;
+}
+
+.red-bg {
+  background-color: #ff4139;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  font-size: 20px;
+}
+
+.form input {
+  margin: 5px 0;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+}
+
+.form button {
+  max-width: 150px;
+  margin: 10px auto 0;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+}
+
+.form button a {
+  color: #000;
 }

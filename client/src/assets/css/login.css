@@ -1,0 +1,46 @@
+.login {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.login .center-div {
+  width: 80%;
+  max-width: 260px;
+}
+
+.login h1 {
+  color: #145fd2;
+}
+
+.login .form input {
+  background-color: #d0edff;
+}
+
+.login .form input::placeholder {
+  color: #145fd2;
+  font-weight: bold;
+}
+
+.login .form button {
+  background-color: #12d088;
+  color: #145fd2;
+  font-weight: bold;
+  padding: 10px 40px;
+}
+
+.login .form button a {
+  font-weight: bold;
+  color: #145fd2;
+  text-decoration: none;
+}
+
+.login p {
+  color: #145fd2;
+  font-size: 20px;
+}
+
+.login a {
+  color: #145fd2;
+  text-decoration: underline;
+}

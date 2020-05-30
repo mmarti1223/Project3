@@ -1,0 +1,42 @@
+.sign-up {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #57bd12;
+}
+
+.sign-up .center-div {
+  width: 80%;
+  max-width: 260px;
+}
+
+.sign-up h1 {
+  color: #ffd328;
+}
+
+.sign-up .form input::placeholder {
+  color: #035300;
+  font-weight: bold;
+}
+
+.sign-up .form button {
+  background-color: #ffd328;
+  color: #035300;
+  font-weight: bold;
+}
+
+.sign-up .form button a {
+  font-weight: bold;
+  color: #035300;
+  text-decoration: none;
+}
+
+.sign-up p {
+  color: #fff;
+  font-size: 20px;
+}
+
+.sign-up a {
+  color: #fff;
+  text-decoration: underline;
+}

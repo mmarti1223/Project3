@@ -6,6 +6,8 @@ import "./assets/css/main.css";
 import { AppContext, initialState } from "./utils";
 import Landing from "./components/Landing";
 import Home from "./components/Home";
+import SignUp from "./components/SignUp";
+import Login from "./components/Login";
 
 export default class App extends Component {
   constructor(props) {
@@ -20,6 +22,8 @@ export default class App extends Component {
         <Router>
           <Route exact path="/" component={Landing} />
           <Route path="/home" component={Home} />
+          <Route path="/signup" component={SignUp} />
+          <Route path="/login" component={Login} />
         </Router>
       </AppContext.Provider>
     );
