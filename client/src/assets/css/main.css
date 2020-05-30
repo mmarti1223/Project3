@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@800&family=Work+Sans:wght@300&display=swap");
+
+body {
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: "Nunito", sans-serif;
+}
+
+.font-green {
+  color: #57bd12;
+}
+
+.center-div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bttn {
+  font-size: 20px;
+  font-weight: semi-bold;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 50px;
+}
+
+.bttn:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.red-bg {
+  background-color: #ff4139;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  font-size: 20px;
+}
+
+.form input {
+  margin: 5px 0;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+}
+
+.form button {
+  max-width: 150px;
+  margin: 10px auto 0;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+}
+
+.form button a {
+  color: #000;
+}
