@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import AnimalCard from "./AnimalCard";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
 
 export default class AnimalGrid extends Component {
   state = {

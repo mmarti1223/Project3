@@ -4,8 +4,11 @@
   text-align: center;
 }
 
+.home .center-div {
+  width: 100%;
+}
+
 .home h1 {
-  color: #57bd12;
   width: 50%;
   max-width: 160px;
   margin: 0 auto;
@@ -35,7 +38,7 @@
 }
 
 .home .animal-grid .animal-card {
-  margin: 6% 0;
+  margin: 7% 0;
 }
 
 .home .animal-grid .animal-card img {

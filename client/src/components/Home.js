@@ -6,10 +6,12 @@ export default class Home extends Component {
   render() {
     return (
       <div className="home">
-        <h1>Howdy explorer!</h1>
-        <p>Click on an animal to get started!</p>
+        <div className="center-div">
+          <h1 className="font-green">Howdy explorer!</h1>
+          <p>Click on an animal to get started!</p>
 
-        <AnimalGrid />
+          <AnimalGrid />
+        </div>
       </div>
     );
   }
