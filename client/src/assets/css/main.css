@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@800&family=Work+Sans:wght@300&display=swap");
+html {
+  /* overflow: hidden; */
+}
 
 body {
   font-family: "Work Sans", sans-serif;
