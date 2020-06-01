@@ -27,6 +27,5 @@ const UserPrize = sequelize.define("UserPrize", {
   }
 });
 
-
 return UserPrize;
 };

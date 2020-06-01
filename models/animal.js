@@ -26,5 +26,10 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
+  Animal.associate = (models) => {
+    Animal.hasMany(models.Trivia, {
+      foreignKey: 'animal_id'
+    });
+  }
   return Animal;
 };
