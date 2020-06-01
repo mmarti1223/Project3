@@ -7,6 +7,7 @@
 .landing .content {
   width: 80%;
   max-width: 400px;
+  z-index: 3;
 }
 
 .landing .content .logo {
@@ -30,7 +31,11 @@
 .landing .green-box {
   height: 15vh;
   width: 100vw;
-  background-color: #57bd12;
+  background-image: url("../images/zigzag.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #baf471;
+  opacity: 0.9;
   position: absolute;
   bottom: 0;
   left: 0;

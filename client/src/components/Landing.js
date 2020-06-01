@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../assets/css/landing.css";
 import { Link } from "react-router-dom";
-import { AppContext } from "../utils";
+// import { AppContext } from "../utils";
 
 import logo from "../assets/images/zooGo_logo.svg";
 import discoverIcon from "../assets/images/discover_icon.svg";
@@ -22,11 +22,11 @@ export default class Landing extends Component {
             Explore the zoo to find animals and earn points you can redeem for
             cool prizes!
           </p>
-          <Link className="bttn red-bg" to="/login">
+          <Link className="bttn red-bg" to="/signup">
             LET'S PLAY!
           </Link>
         </div>
-        {/* <div className="green-box"></div> */}
+        <div className="green-box"></div>
       </div>
     );
   }
