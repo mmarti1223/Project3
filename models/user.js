@@ -25,7 +25,8 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     lastLogin: {
-      type: DataTypes.DATE
+      type: DataTypes.DATE,
+      defaultValue: Date.now
     },
     points: {
       type: DataTypes.INTEGER,

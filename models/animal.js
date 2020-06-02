@@ -6,6 +6,11 @@ module.exports = function(sequelize, DataTypes) {
       // have a text value
       allowNull: false,
     },
+    thumbnail: {
+      // Assuming pictures will be an asset, otherwise change to binary or blob
+      type: DataTypes.STRING,
+      allowNull: true
+    },
     picture: {
       // Assuming pictures will be an asset, otherwise change to binary or blob
       type: DataTypes.STRING,
@@ -16,7 +21,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     description: {
-      type: DataTypes.STRING
+      type: DataTypes.TEXT
     },
     youtube: {
       type: DataTypes.STRING,
