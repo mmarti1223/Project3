@@ -17,6 +17,7 @@ module.exports = function (app) {
         include: [db.Trivia]})
         .then((data) => {
           res.json(data);
+          console.log(data)
         })
         .catch(console.error);
     });
