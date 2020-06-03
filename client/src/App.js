@@ -8,11 +8,11 @@ import Landing from "./components/Landing";
 import Home from "./components/Home";
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
+import AnimalPage from "./components/AnimalPage";
 
 export default class App extends Component {
   constructor(props) {
     super(props);
-
     this.state = {};
   }
 
@@ -24,6 +24,8 @@ export default class App extends Component {
           <Route path="/home" component={Home} />
           <Route path="/signup" component={SignUp} />
           <Route path="/login" component={Login} />
+          <Route path="/animal-page/:id" component={AnimalPage} />
+          <Route path="/trivia-page/:id" component={AnimalPage} />
         </Router>
       </AppContext.Provider>
     );
