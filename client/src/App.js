@@ -9,6 +9,7 @@ import Home from "./components/Home";
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
 import AnimalPage from "./components/AnimalPage";
+import TriviaPage from "./components/TriviaPage";
 
 export default class App extends Component {
   constructor(props) {
@@ -25,7 +26,7 @@ export default class App extends Component {
           <Route path="/signup" component={SignUp} />
           <Route path="/login" component={Login} />
           <Route path="/animal-page/:id" component={AnimalPage} />
-          <Route path="/trivia-page/:id" component={AnimalPage} />
+          <Route path="/trivia-page" component={TriviaPage} />
         </Router>
       </AppContext.Provider>
     );
