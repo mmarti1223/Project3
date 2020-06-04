@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import AnimalCard from "./AnimalCard";
-import axios from "axios" ;
+import axios from "axios";
 
 export default class AnimalGrid extends Component {
   state = {
