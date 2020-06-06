@@ -11,7 +11,7 @@ export default class Landing extends Component {
     return (
       <div className="landing">
         <div className="content center-div">
-          <img className="logo" src={logo} alt="logo" />
+          <img className="logo mt-5" src={logo} alt="logo" />
           <img
             className="discover-icon"
             src={discoverIcon}
@@ -22,8 +22,8 @@ export default class Landing extends Component {
             Explore the zoo to find animals and earn points you can redeem for
             cool prizes!
           </p>
-          <Link className="bttn red-bg" to="/signup">
-            LET'S PLAY!
+          <Link className="bttn red-bg mb-5 nunito-font" to="/signup">
+            Let's Play!
           </Link>
         </div>
         <div className="green-box"></div>

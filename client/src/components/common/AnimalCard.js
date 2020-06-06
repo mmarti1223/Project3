@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-// import Col from "react-bootstrap/Col";
 
 export default class AnimalCard extends Component {
   render() {
