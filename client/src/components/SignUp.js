@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "../assets/css/signup.css";
 import { Link } from "react-router-dom";
 
+import ZebraImg from '../assets/images/zebra.png';
+
 export default class SignUp extends Component {
   state = {
     name: "",
@@ -19,7 +21,9 @@ export default class SignUp extends Component {
   render() {
     return (
       <div className="sign-up">
+        <div><img src={ZebraImg} width="100%" alt="Zebra" className="zebra" /></div>
         <div className="center-div">
+          
           <h1>Sign Up</h1>
 
           <div className="form">
@@ -51,10 +55,14 @@ export default class SignUp extends Component {
               name="birthYear"
               onChange={this.handleInputChange}
             />
-            <button>
-              <Link to="/home">Sign Up</Link>
-            </button>
+            
+            <div className="mt-2">
+              <button className="nunito-font">
+                <Link to="/home">Sign Up</Link>
+              </button>
+            </div>
           </div>
+          
           <p>
             Have an account? <Link to="/login">Login</Link>
           </p>

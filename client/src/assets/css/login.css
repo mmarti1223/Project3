@@ -7,6 +7,7 @@
 .login .center-div {
   width: 80%;
   max-width: 260px;
+  z-index: 2;
 }
 
 .login h1 {
@@ -23,7 +24,7 @@
 }
 
 .login .form button {
-  background-color: #12d088;
+  background-color: #13d089;
   color: #145fd2;
   font-weight: bold;
   padding: 10px 40px;
@@ -43,4 +44,41 @@
 .login a {
   color: #145fd2;
   text-decoration: underline;
+}
+
+.giraffe {
+  margin: 0 auto;
+}
+
+/* targeting iphone 5 screen size */
+@media only screen and (max-height: 630px) {
+  .giraffe {
+    width: 70%;
+  }
+}
+
+/* targeting ipad screen size */
+@media only screen and (min-width: 620px) {
+  .giraffe {
+    width: 35%;
+  }
+}
+
+/* targeting large screen sizes */
+@media screen and (min-width: 1400px) {
+  .giraffe {
+    width: 15%;
+  }
+}
+
+/* Hiding arrow controls from input - Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hiding arrow controls from input - Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

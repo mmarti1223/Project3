@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import '../assets/css/animal-page.css';
+import Container from 'react-bootstrap/Container';
+
+import CoinsIcon from '../assets/images/coins_yellow.svg';
 
 export default class AnimalPage extends Component {
   state = {
@@ -8,8 +12,6 @@ export default class AnimalPage extends Component {
   };
 
   componentDidMount() {
-    //const currentID = this.props.match.params;
-    //console.log(currentID);
     axios.get(`/api/animals/${this.props.match.params.id}`).then((res) => {
       this.setState({ currentAnimal: res.data });
     });
@@ -17,21 +19,22 @@ export default class AnimalPage extends Component {
 
   render() {
     return (
-      <div>
+      <Container fluid>
         <img
           src={this.state.currentAnimal.picture}
           alt={this.state.currentAnimal.name}
-          width="400px"
+          width="100%" className="animal-img my-4"
         />
-        <h2>{this.state.currentAnimal.name}</h2>
-        <h3>Home: {this.state.currentAnimal.origin}</h3>
-        <p>{this.state.currentAnimal.description}</p>
-        <Link
-          to={{ pathname: "/trivia-page", state: this.state.currentAnimal }}
-        >
-          <button>Get Points!</button>
-        </Link>
-      </div>
+        <h2 className="nunito-font animal-title">{this.state.currentAnimal.name}</h2>
+        <h3 className="nunito-font animal-subtitle mb-3">Home: {this.state.currentAnimal.origin}</h3>
+        <p className="animal-description mb-4">{this.state.currentAnimal.description}</p>
+        <div className="text-center pt-2">
+          <Link to={{ pathname: "/trivia-page", state: this.state.currentAnimal }}>
+            <button className="nunito-font mb-5"><img className="pr-2" src={CoinsIcon} width="60px" alt="coins icon" />Get Points!</button>
+          </Link>
+        </div>
+        <div className="coral-box"></div>
+      </Container>
     );
   }
 }
