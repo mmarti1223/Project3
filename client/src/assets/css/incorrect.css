@@ -1,0 +1,57 @@
+.incorrect {
+  height: 100vh;
+  width: 100vw;
+  background-color: #b61d2f;
+  text-align: center;
+}
+
+.incorrect .content {
+  min-width: 230px;
+  color: #fff;
+}
+
+.incorrect .content .top {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.incorrect .content .top img {
+  width: 40px;
+}
+
+.incorrect .content .top p {
+  font-size: 22px;
+}
+
+.incorrect .content .center {
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 47px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 47px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 47px 0px rgba(0, 0, 0, 0.75);
+  padding: 80px;
+}
+
+.incorrect .content .center h2.font-yellow {
+  font-size: 45px;
+}
+
+.incorrect .content .bottom {
+  height: 30vh;
+  width: 100%;
+  background-image: url(../images/animal-spots-red.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.incorrect .content .bottom .bttn {
+  color: #b61d2f;
+  font-weight: bold;
+  padding: 15px 50px;
+}

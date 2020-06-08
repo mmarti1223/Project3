@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&family=Work+Sans:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@800&family=Work+Sans:wght@300;400&display=swap");
 html {
   /* overflow: hidden; */
 }
@@ -24,11 +24,10 @@ h1 {
 }
 
 .center-div {
-  /* position: absolute;
+  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); */
-  position: relative;
+  transform: translate(-50%, -50%);
   margin: 0 auto;
 }
 
@@ -47,6 +46,10 @@ h1 {
 
 .red-bg {
   background-color: #ff4139;
+}
+
+.yellow-bg {
+  background-color: #fdd329;
 }
 
 .form {
@@ -80,7 +83,7 @@ h1 {
 }
 
 .nunito-font {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 .blue-box {
@@ -91,7 +94,7 @@ h1 {
   /* background-size: cover; */
   /* position: absolute; */
   opacity: 0.5;
-  position:fixed;
+  position: fixed;
   bottom: 0;
   /* left: 0; */
   z-index: 1;
@@ -100,4 +103,3 @@ h1 {
 .regular-link {
   text-decoration: underline;
 }
-
