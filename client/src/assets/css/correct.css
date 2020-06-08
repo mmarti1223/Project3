@@ -1,0 +1,57 @@
+.correct {
+  height: 100vh;
+  width: 100vw;
+  background-color: #078b74;
+  text-align: center;
+}
+
+.correct .content {
+  min-width: 230px;
+  color: #fff;
+}
+
+.correct .content .top {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.correct .content .top img {
+  width: 40px;
+}
+
+.correct .content .top p {
+  font-size: 22px;
+}
+
+.correct .content .center {
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 47px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 47px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 47px 0px rgba(0, 0, 0, 0.75);
+  padding: 80px;
+}
+
+.correct .content .center h2.font-yellow {
+  font-size: 45px;
+}
+
+.correct .content .bottom {
+  height: 30vh;
+  width: 100%;
+  background-image: url(../images/animal-spots-green.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.correct .content .bottom .bttn {
+  color: #b61d2f;
+  font-weight: bold;
+  padding: 15px 50px;
+}
