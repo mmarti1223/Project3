@@ -22,9 +22,9 @@ export default class SignUp extends Component {
     return (
       <div className="sign-up">
         <div><img src={ZebraImg} width="100%" alt="Zebra" className="zebra" /></div>
-        <div className="center-div">
+        <div className="center-div mt-5">
           
-          <h1>Sign Up</h1>
+          <h1 className="mt-5">Sign Up</h1>
 
           <div className="form">
             <input
