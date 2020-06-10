@@ -22,7 +22,7 @@ export default class Landing extends Component {
             Explore the zoo to find animals and earn points you can redeem for
             cool prizes!
           </p>
-          <Link className="bttn red-bg mb-5 nunito-font" to="/signup">
+          <Link className="bttn red-bg nunito-font mb-5" to="/signup">
             Let's Play!
           </Link>
         </div>

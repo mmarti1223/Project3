@@ -19,7 +19,7 @@ export default class Login extends Component {
   render() {
     return (
       <div className="login">
-        <div><img src={Giraffe} width="100%" alt="Giraffe" className="giraffe mt-5 mb-5" /></div>
+        <div><img src={Giraffe} width="100%" alt="Giraffe" className="giraffe mt-3 mb-5" /></div>
         <div className="center-div">
           <h1>Hello again!</h1>
           <div className="form">
@@ -37,7 +37,7 @@ export default class Login extends Component {
               name="birthYear"
               onChange={this.handleInputChange}
             />
-            <button className="nunito-font">
+            <button className="nunito-font mt-1">
               <Link to="/home">Login</Link>
             </button>
           </div>

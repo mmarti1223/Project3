@@ -20,9 +20,6 @@
   margin: 35px auto;
 }
 
-.landing .content h1 {
-}
-
 .landing .content p {
   font-size: 19px;
   margin: 10px 0 40px;
@@ -36,7 +33,7 @@
   background-size: cover;
   color: #baf471;
   opacity: 0.9;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   z-index: 1;
@@ -51,9 +48,6 @@
   .landing .content .discover-icon {
     width: 150px;
     margin: 10px auto 20px;
-  }
-
-  .landing .content h1 {
   }
 
   .landing .content p {

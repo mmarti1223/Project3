@@ -4,15 +4,20 @@ import "../assets/css/trivia-page.css";
 import StarIcon from "../assets/images/star_icon.svg";
 import TriviaBgrd from "../assets/images/trivia_bgrd.svg";
 
+import { AppContext, initialState } from "../utils";
+// const context=React.useContext(AppContext);
+
 export default class TriviaPage extends Component {
   state = {
-    trivia: {},
+    ...initialState,
+    trivia: {}
   };
 
   componentDidMount() {
-    console.log(this.props.location.state.Trivia[0]);
+    // console.log(this.props.location.state.Trivia[0]);
     this.setState({ trivia: this.props.location.state.Trivia[0] }); //only gets the first question
   }
+
   render() {
     return (
       <div className="trivia">
@@ -25,8 +30,12 @@ export default class TriviaPage extends Component {
             {this.state.trivia.question}
           </h3>
           <div className="mt-4">
-            <button className="trivia-btn nunito-font mb-4">True</button>
-            <button className="trivia-btn nunito-font">False</button>
+           {/* eslint-disable-next-line */}
+            {this.state.trivia.answer == 1 ? <span><button className="trivia-btn nunito-font mb-4" value="correctAnswer">True</button>
+            <button className="trivia-btn nunito-font" value="incorrectAnswer">False</button></span> 
+            : 
+            <span><button className="trivia-btn nunito-font mb-4" value="incorrectAnswer">True</button>
+            <button className="trivia-btn nunito-font" value="correctAnswer">False</button></span>}
           </div>
         </div>
         <div className="trivia-bgrd">
