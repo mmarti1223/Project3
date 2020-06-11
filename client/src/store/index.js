@@ -1,3 +1,13 @@
+// configuration to access heroku database
+// "development": {
+//   "username": "umk01e2375qvi5qx",
+//   "password": "f1idg5bqejquu4sf",
+//   "database": "i34adtr8uas8wno3",
+//   "host": "sq65ur5a5bj7flas.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+//   "port": 3306,
+//   "dialect": "mysql"
+// },
+
 import React from "react";
 
 export const GlobalContext = React.createContext();
@@ -7,27 +17,36 @@ export const initialState = {
     points: 0,
   },
   animals: [],
+  currentAnimal: {},
 };
 
 export const reducer = (state, action) => {
   switch (action.type) {
     case "addPoints":
-      let newState = {
+      return {
         ...state,
         currentAccount: {
           ...state.currentAccount,
           points: action.payload + state.currentAccount.points,
         },
       };
-
-      console.log(newState);
-      return newState;
-      break;
-
+    case "storeAnimals":
+      return {
+        ...state,
+        animals: action.payload,
+      };
+    case "setCurrentAnimal":
+      const currentAnimal = state.animals.find(
+        (animal) => animal.id == action.payload
+      );
+      return {
+        ...state,
+        currentAnimal,
+      };
     default:
+      return state;
       break;
   }
-  return state;
 };
 
 // const reducer = (state, action) => {

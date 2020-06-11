@@ -4,21 +4,21 @@ import "../assets/css/trivia-page.css";
 import StarIcon from "../assets/images/star_icon.svg";
 import TriviaBgrd from "../assets/images/trivia_bgrd.svg";
 
-import { AppContext, initialState, GlobalContext } from "../store";
+import { initialState, GlobalContext } from "../store";
+import { withRouter } from "react-router-dom";
 
-export default class TriviaPage extends Component {
-  state = {
-    ...initialState,
-    trivia: {},
-  };
-
-  componentDidMount() {
-    this.setState({ trivia: this.props.location.state.Trivia[0] }); // only gets the first question
+class TriviaPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      ...initialState,
+      trivia: {},
+    };
   }
 
-  // render buttons with click hanlder
-  // check for if the button text matches correct answer
-  // and redirct to correspondig path
+  componentDidMount() {
+    this.setState({ trivia: this.context.globalState.currentAnimal.Trivia[0] }); // only gets the first question
+  }
 
   checkAnswer = (choice) => {
     let correctAnswer = this.state.trivia.answer;
@@ -27,10 +27,9 @@ export default class TriviaPage extends Component {
         type: "addPoints",
         payload: 20,
       });
-      alert("Points added!");
-      // this.props.history.push("/");
+      this.props.history.push("/correct");
     } else {
-      alert("incorrect");
+      this.props.history.push("/incorrect");
     }
   };
 
@@ -46,38 +45,20 @@ export default class TriviaPage extends Component {
             {this.state.trivia.question}
           </h3>
           <div className="mt-4">
-            {/* eslint-disable-next-line */}
-            {this.state.trivia.answer == 1 ? (
-              <span>
-                <button
-                  className="trivia-btn nunito-font mb-4"
-                  onClick={() => this.checkAnswer("1")}
-                >
-                  True
-                </button>
-                <button
-                  className="trivia-btn nunito-font"
-                  onClick={() => this.checkAnswer("0")}
-                >
-                  False
-                </button>
-              </span>
-            ) : (
-              <span>
-                <button
-                  className="trivia-btn nunito-font mb-4"
-                  value="incorrectAnswer"
-                >
-                  True
-                </button>
-                <button
-                  className="trivia-btn nunito-font"
-                  value="correctAnswer"
-                >
-                  False
-                </button>
-              </span>
-            )}
+            <span>
+              <button
+                className="trivia-btn nunito-font mb-4"
+                onClick={() => this.checkAnswer("1")}
+              >
+                True
+              </button>
+              <button
+                className="trivia-btn nunito-font"
+                onClick={() => this.checkAnswer("0")}
+              >
+                False
+              </button>
+            </span>
           </div>
         </div>
         <div className="trivia-bgrd">
@@ -89,3 +70,4 @@ export default class TriviaPage extends Component {
 }
 
 TriviaPage.contextType = GlobalContext;
+export default withRouter(TriviaPage);

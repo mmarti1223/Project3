@@ -1,10 +1,10 @@
 {
   "development": {
     "username": "root",
-    "password": "Tiger290!",
+    "password": "root",
     "database": "project3",
     "host": "localhost",
-    "port": 3306,
+    "port": 8889,
     "dialect": "mysql"
   },
   "test": {
