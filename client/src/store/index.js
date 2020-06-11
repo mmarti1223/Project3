@@ -17,21 +17,32 @@ export const initialState = {
     points: 0,
   },
   animals: [],
+  currentAnimal: {},
 };
 
 export const reducer = (state, action) => {
   switch (action.type) {
     case "addPoints":
-      let newState = {
+      return {
         ...state,
         currentAccount: {
           ...state.currentAccount,
           points: action.payload + state.currentAccount.points,
         },
       };
-      return newState;
-      break;
-
+    case "storeAnimals":
+      return {
+        ...state,
+        animals: action.payload,
+      };
+    case "setCurrentAnimal":
+      const currentAnimal = state.animals.find(
+        (animal) => animal.id == action.payload
+      );
+      return {
+        ...state,
+        currentAnimal,
+      };
     default:
       return state;
       break;

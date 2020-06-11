@@ -17,7 +17,7 @@ class TriviaPage extends Component {
   }
 
   componentDidMount() {
-    this.setState({ trivia: this.props.location.state.Trivia[0] }); // only gets the first question
+    this.setState({ trivia: this.context.globalState.currentAnimal.Trivia[0] }); // only gets the first question
   }
 
   // render buttons with click hanlder
