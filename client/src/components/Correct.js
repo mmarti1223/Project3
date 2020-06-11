@@ -11,14 +11,14 @@ export default class Correct extends Component {
           <div className="top">
             <img src={correctIcon} alt="" />
             <h1 className="font-yellow">Correct!</h1>
-            <p>
+            {/* <p>
               Gorillas live in large groups that can have as many as 21 memebrs.
-            </p>
+            </p> */}
           </div>
 
           <div className="center nunito-font center-div">
             <h2>YOU EARNED</h2>
-            <h2 className="font-yellow">100</h2>
+            <h2 className="font-yellow">20</h2>
             <h2>POINTS</h2>
           </div>
 

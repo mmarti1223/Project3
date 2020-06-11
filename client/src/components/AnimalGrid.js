@@ -2,16 +2,20 @@ import React, { Component } from "react";
 import AnimalCard from "./AnimalCard";
 import axios from "axios";
 import Spinner from "react-bootstrap/Spinner";
+import { GlobalContext } from "../store";
 
 export default class AnimalGrid extends Component {
   state = {
-    animals: [],
     loading: true,
   };
 
   componentDidMount() {
     axios.get("/api/animals").then((res) => {
-      this.setState({ animals: res.data, loading: false });
+      this.setState({ loading: false });
+      this.context.dispatch({
+        type: "storeAnimals",
+        payload: res.data,
+      });
     });
   }
 
@@ -24,7 +28,7 @@ export default class AnimalGrid extends Component {
           </Spinner>
         ) : (
           <div className="grid">
-            {this.state.animals.map((animal, key) => (
+            {this.context.globalState.animals.map((animal, key) => (
               <AnimalCard
                 key={key}
                 src={animal.thumbnail}
@@ -48,3 +52,4 @@ export default class AnimalGrid extends Component {
     );
   }
 }
+AnimalGrid.contextType = GlobalContext;
