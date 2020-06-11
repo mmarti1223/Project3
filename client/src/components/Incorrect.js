@@ -11,9 +11,9 @@ export default class Incorrect extends Component {
           <div className="top">
             <img src={wrongIcon} alt="" />
             <h1 className="font-yellow">Wrong!</h1>
-            <p>
+            {/* <p>
               Gorillas live in large groups that can have as many as 21 memebrs.
-            </p>
+            </p> */}
           </div>
 
           <div className="center nunito-font center-div">

@@ -4,13 +4,17 @@ import "../assets/css/trivia-page.css";
 import StarIcon from "../assets/images/star_icon.svg";
 import TriviaBgrd from "../assets/images/trivia_bgrd.svg";
 
-import { AppContext, initialState, GlobalContext } from "../store";
+import { initialState, GlobalContext } from "../store";
+import { withRouter } from "react-router-dom";
 
-export default class TriviaPage extends Component {
-  state = {
-    ...initialState,
-    trivia: {},
-  };
+class TriviaPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      ...initialState,
+      trivia: {},
+    };
+  }
 
   componentDidMount() {
     this.setState({ trivia: this.props.location.state.Trivia[0] }); // only gets the first question
@@ -27,12 +31,15 @@ export default class TriviaPage extends Component {
         type: "addPoints",
         payload: 20,
       });
-      alert("Points added!");
-      // this.props.history.push("/");
+      this.props.history.push("/correct");
     } else {
-      alert("incorrect");
+      this.props.history.push("/incorrect");
     }
   };
+
+  componentDidUpdate() {
+    console.log(this.context.globalState.currentAccount);
+  }
 
   render() {
     return (
@@ -89,3 +96,4 @@ export default class TriviaPage extends Component {
 }
 
 TriviaPage.contextType = GlobalContext;
+export default withRouter(TriviaPage);

@@ -1,3 +1,13 @@
+// configuration to access heroku database
+// "development": {
+//   "username": "umk01e2375qvi5qx",
+//   "password": "f1idg5bqejquu4sf",
+//   "database": "i34adtr8uas8wno3",
+//   "host": "sq65ur5a5bj7flas.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+//   "port": 3306,
+//   "dialect": "mysql"
+// },
+
 import React from "react";
 
 export const GlobalContext = React.createContext();
@@ -19,15 +29,13 @@ export const reducer = (state, action) => {
           points: action.payload + state.currentAccount.points,
         },
       };
-
-      console.log(newState);
       return newState;
       break;
 
     default:
+      return state;
       break;
   }
-  return state;
 };
 
 // const reducer = (state, action) => {
