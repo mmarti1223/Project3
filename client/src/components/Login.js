@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../assets/css/login.css";
 import { Link } from "react-router-dom";
+import axios from 'axios';
 
 import Giraffe from '../assets/images/giraffe.png';
 
@@ -15,6 +16,25 @@ export default class Login extends Component {
       [e.target.name]: e.target.value,
     });
   };
+
+   login = () => {
+    const user = {
+     username: this.state.username,
+     password: this.state.birthYear
+    }
+    console.log(user)
+    axios.post("/api/login", {
+      username: user.username,
+      password: user.password
+    })
+    .then(result => {
+      localStorage.setItem("user",JSON.stringify(result.data))
+      this.props.history.push("/home")
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  }
 
   render() {
     return (
@@ -37,8 +57,8 @@ export default class Login extends Component {
               name="birthYear"
               onChange={this.handleInputChange}
             />
-            <button className="nunito-font mt-1">
-              <Link to="/home">Login</Link>
+            <button className="nunito-font mt-1" onClick={this.login}>
+              Login
             </button>
           </div>
           <p>
