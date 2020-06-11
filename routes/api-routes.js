@@ -45,7 +45,7 @@ module.exports = function (app) {
     .catch(error=>res.sendStatus(500));
   });
 
-  // Updates the user's total points, requires username and points (total number of points of the user) to be sent in request. Returns status code.
+  // Updates the user's total points, requires user id and points (total number of points of the user) to be sent in request. Returns status codes.
    app.put("/api/updatescore", function (req,res) {
       db.User.update({
         points: req.body.points
@@ -56,20 +56,6 @@ module.exports = function (app) {
       .then(()=>res.sendStatus(202),error=>res.sendStatus(500))
       .catch(error=>res.status(500).send('Error Updating User Points'));
   });
-
-
-  app.put("/api/updatescore", function (req,res) {
-    db.User.update({
-      points: req.body.points
-    }, {
-      where: {
-        id: req.body.id
-      }})
-    .then(()=>res.sendStatus(202),error=>res.sendStatus(500))
-    .catch(error=>res.status(500).send('Error Updating User Points'));
-});
-
-
 
 
 
