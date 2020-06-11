@@ -20,10 +20,6 @@ class TriviaPage extends Component {
     this.setState({ trivia: this.context.globalState.currentAnimal.Trivia[0] }); // only gets the first question
   }
 
-  // render buttons with click hanlder
-  // check for if the button text matches correct answer
-  // and redirct to correspondig path
-
   checkAnswer = (choice) => {
     let correctAnswer = this.state.trivia.answer;
     if (choice === correctAnswer) {
@@ -37,10 +33,6 @@ class TriviaPage extends Component {
     }
   };
 
-  componentDidUpdate() {
-    console.log(this.context.globalState.currentAccount);
-  }
-
   render() {
     return (
       <div className="trivia">
@@ -53,38 +45,20 @@ class TriviaPage extends Component {
             {this.state.trivia.question}
           </h3>
           <div className="mt-4">
-            {/* eslint-disable-next-line */}
-            {this.state.trivia.answer == 1 ? (
-              <span>
-                <button
-                  className="trivia-btn nunito-font mb-4"
-                  onClick={() => this.checkAnswer("1")}
-                >
-                  True
-                </button>
-                <button
-                  className="trivia-btn nunito-font"
-                  onClick={() => this.checkAnswer("0")}
-                >
-                  False
-                </button>
-              </span>
-            ) : (
-              <span>
-                <button
-                  className="trivia-btn nunito-font mb-4"
-                  value="incorrectAnswer"
-                >
-                  True
-                </button>
-                <button
-                  className="trivia-btn nunito-font"
-                  value="correctAnswer"
-                >
-                  False
-                </button>
-              </span>
-            )}
+            <span>
+              <button
+                className="trivia-btn nunito-font mb-4"
+                onClick={() => this.checkAnswer("1")}
+              >
+                True
+              </button>
+              <button
+                className="trivia-btn nunito-font"
+                onClick={() => this.checkAnswer("0")}
+              >
+                False
+              </button>
+            </span>
           </div>
         </div>
         <div className="trivia-bgrd">

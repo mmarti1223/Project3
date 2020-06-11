@@ -5,6 +5,7 @@ import "./assets/css/main.css";
 
 import { GlobalContext, initialState, reducer } from "./store";
 
+import Navbar from "./components/Navbar";
 import Landing from "./components/Landing";
 import Home from "./components/Home";
 import SignUp from "./components/SignUp";
@@ -20,6 +21,8 @@ const App = () => {
   return (
     <GlobalContext.Provider value={{ globalState, dispatch }}>
       <Router>
+        <Navbar />
+
         <Route exact path="/" component={Landing} />
         <Route path="/home" component={Home} />
         <Route path="/signup" component={SignUp} />
