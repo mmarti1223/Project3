@@ -13,7 +13,7 @@ require("dotenv").config();
 const db = require("./models");
 
 // API routes
-require("./routes/api-routes.js")(app);
+require("./routes/api/api-routes.js")(app);
 
 app.use(express.static(path.join(__dirname, "client", "build")));
 
