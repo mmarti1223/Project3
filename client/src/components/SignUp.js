@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../assets/css/signup.css";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 import ZebraImg from '../assets/images/zebra.png';
 
@@ -17,6 +18,21 @@ export default class SignUp extends Component {
       [e.target.name]: e.target.value,
     });
   };
+  
+  signUp = () => {
+    const user = {
+      username: this.state.username,
+      name: this.state.name,
+      password: this.state.birthYear,
+      email:this.state.email
+    }
+    axios.post("/api/registerUser",user)
+    .then (result=>
+      {console.log(result)
+        localStorage.setItem("user",JSON.stringify(result.data))
+        this.props.history.push("/home")
+      })
+  }
 
   render() {
     return (
@@ -57,8 +73,8 @@ export default class SignUp extends Component {
             />
             
             <div className="mt-2">
-              <button className="nunito-font">
-                <Link to="/home">Sign Up</Link>
+              <button className="nunito-font" onClick={this.signUp}>
+                Sign Up
               </button>
             </div>
           </div>
