@@ -14,6 +14,7 @@ import AnimalPage from "./components/AnimalPage";
 import TriviaPage from "./components/TriviaPage";
 import Correct from "./components/Correct";
 import Incorrect from "./components/Incorrect";
+import Redeem from "./components/Redeem";
 
 const App = () => {
   const [globalState, dispatch] = React.useReducer(reducer, initialState);
@@ -21,13 +22,14 @@ const App = () => {
   return (
     <GlobalContext.Provider value={{ globalState, dispatch }}>
       <Router>
-        <Navbar />
+        {/* <Navbar /> */}
 
         <Route exact path="/" component={Landing} />
         <Route path="/home" component={Home} />
         <Route path="/signup" component={SignUp} />
         <Route path="/login" component={Login} />
         <Route path="/animal-page/:id" component={AnimalPage} />
+        <Route path="/redeem" component={Redeem} />
         <Route path="/trivia-page" component={TriviaPage} />
         <Route path="/correct" component={Correct} />
         <Route path="/incorrect" component={Incorrect} />

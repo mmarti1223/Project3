@@ -6,28 +6,24 @@ import { Link } from "react-router-dom";
 export default class Incorrect extends Component {
   render() {
     return (
-      <div className="incorrect">
-        <div className="content">
-          <div className="top">
+      <div>
+        <div className="incorrect">
+          <div className="header">
             <img src={wrongIcon} alt="" />
             <h1 className="font-yellow">Wrong!</h1>
-            {/* <p>
-              Gorillas live in large groups that can have as many as 21 memebrs.
-            </p> */}
           </div>
 
-          <div className="center nunito-font center-div">
-            <h2>YOU EARNED</h2>
-            <h2 className="font-yellow">0</h2>
-            <h2>POINTS</h2>
+          <div className="center nunito-font">
+            <h2>
+              EARNED <span className="fs-70 font-yellow">0</span> POINTS
+            </h2>
           </div>
 
-          <div className="bottom">
-            <Link className="bttn yellow-bg" to="/home">
-              HOME
-            </Link>
-          </div>
+          <Link className="bttn yellow-bg" to="/home">
+            Find more animals
+          </Link>
         </div>
+        {/* <img className="pattern-bg" src={animalPrint} alt="animal-pattern" /> */}
       </div>
     );
   }
