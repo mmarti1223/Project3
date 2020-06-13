@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import axios from "axios";
+// import axios from "axios";
 import { Link } from "react-router-dom";
 import "../assets/css/animal-page.css";
 import Container from "react-bootstrap/Container";
+import Navbar from "./Navbar";
 
 import CoinsIcon from "../assets/images/coins_yellow.svg";
 import { GlobalContext } from "../store";
@@ -21,6 +22,7 @@ export default class AnimalPage extends Component {
   render() {
     return (
       <Container fluid>
+        <Navbar />
         <img
           src={this.context.globalState.currentAnimal.picture}
           alt={this.context.globalState.currentAnimal.name}

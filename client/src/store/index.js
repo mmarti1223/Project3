@@ -13,7 +13,7 @@ import React from "react";
 export const GlobalContext = React.createContext();
 export const initialState = {
   currentAccount: {
-    username: "",
+    username: "", //use userid instead
     points: 0,
   },
   animals: [],
@@ -37,6 +37,7 @@ export const reducer = (state, action) => {
       };
     case "setCurrentAnimal":
       const currentAnimal = state.animals.find(
+        // eslint-disable-next-line
         (animal) => animal.id == action.payload
       );
       return {
@@ -45,7 +46,7 @@ export const reducer = (state, action) => {
       };
     default:
       return state;
-      break;
+      // break;
   }
 };
 

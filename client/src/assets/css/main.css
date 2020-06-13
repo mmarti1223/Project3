@@ -15,6 +15,10 @@ h1 {
   font-family: "Nunito", sans-serif;
 }
 
+.worksans-light {
+  font-weight: 300;
+}
+
 .font-green {
   color: #57bd12;
 }
@@ -23,15 +27,24 @@ h1 {
   color: #fdd329;
 }
 
+.font-blue {
+  color: #0d5fdc;
+}
+
 .font-red {
-  color: #dd2934;
+  color: #b61d2f;
+}
+
+.font-grey {
+  color: #4a544f;
 }
 
 .center-div {
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
+  position: relative;
   margin: 0 auto;
 }
 
