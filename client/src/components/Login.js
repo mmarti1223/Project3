@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "../assets/css/login.css";
 import { Link } from "react-router-dom";
-import axios from 'axios';
-
-import Giraffe from '../assets/images/giraffe.png';
+import axios from "axios";
+ 
+import Giraffe from "../assets/images/giraffe.png";
 
 export default class Login extends Component {
   state = {
@@ -17,29 +17,37 @@ export default class Login extends Component {
     });
   };
 
-   login = () => {
+  login = () => {
     const user = {
-     username: this.state.username,
-     password: this.state.birthYear
-    }
-    console.log(user)
-    axios.post("/api/login", {
-      username: user.username,
-      password: user.password
-    })
-    .then(result => {
-      localStorage.setItem("user",JSON.stringify(result.data))
-      this.props.history.push("/home")
-    })
-    .catch(err => {
-      console.log(err)
-    })
-  }
+      username: this.state.username,
+      password: this.state.birthYear,
+    };
+    console.log(user);
+    axios
+      .post("/api/login", {
+        username: user.username,
+        password: user.password,
+      })
+      .then((result) => {
+        localStorage.setItem("user", JSON.stringify(result.data));
+        this.props.history.push("/home");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   render() {
     return (
       <div className="login">
-        <div><img src={Giraffe} width="100%" alt="Giraffe" className="giraffe mt-3 mb-5" /></div>
+        <div>
+          <img
+            src={Giraffe}
+            width="100%"
+            alt="Giraffe"
+            className="giraffe mt-3 mb-5"
+          />
+        </div>
         <div className="center-div">
           <h1>Hello again!</h1>
           <div className="form">

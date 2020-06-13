@@ -5,7 +5,6 @@ import "./assets/css/main.css";
 
 import { GlobalContext, initialState, reducer } from "./store";
 
-// import Navbar from "./components/Navbar";
 import Landing from "./components/Landing";
 import Home from "./components/Home";
 import SignUp from "./components/SignUp";
@@ -16,7 +15,7 @@ import TriviaPage from "./components/TriviaPage";
 import Correct from "./components/Correct";
 import Incorrect from "./components/Incorrect";
 import Redeem from "./components/Redeem";
-import Prizes from "./components/redeemPage";
+import Prizes from "./components/Prizes";
 
 const App = () => {
   const [globalState, dispatch] = React.useReducer(reducer, initialState);
@@ -24,8 +23,6 @@ const App = () => {
   return (
     <GlobalContext.Provider value={{ globalState, dispatch }}>
       <Router>
-        {/* <Navbar /> */}
-
         <Route exact path="/" component={Landing} />
         <Route path="/home" component={Home} />
         <Route path="/signup" component={SignUp} />

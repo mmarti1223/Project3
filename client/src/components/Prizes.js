@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import HomeNavbar from "./HomeNav";
 
-import "../assets/css/redeem.css";
+import "../assets/css/prizes.css";
 import PointsIcon from "../assets/images/gift-icon.svg";
 import CoinIcon from "../assets/images/coin.svg";
 import Soda from "../assets/images/soda.jpg";
@@ -13,23 +13,26 @@ import Popcorn from "../assets/images/popcorn.jpg";
 import Pizza from "../assets/images/pizza.jpg";
 
 import BlueCheckmarkIcon from "../assets/images/checkmark_blue.svg";
+import { GlobalContext } from "../store";
 
 const Check = () => (
   <img src={BlueCheckmarkIcon} alt="Prize selected" className="checkmark" />
 );
 
-export default class Redeem extends Component {
+export default class Prizes extends Component {
   constructor() {
     super();
     this.state = {
       isHidden: true,
     };
   }
+
   toggleHidden() {
     this.setState({
       isHidden: !this.state.isHidden,
     });
   }
+
   render() {
     return (
       <Container>
@@ -39,13 +42,13 @@ export default class Redeem extends Component {
             <img
               src={PointsIcon}
               alt="Click here to redeem your points"
-              className="redeem-icon mt-5"
+              className="prizes-icon mt-5"
             />
             <h1 className="font-blue mt-2">Prize Time!</h1>
             <div className="points-box m-4 py-4">
               <h2 className="font-blue nunito-font">
                 You have <br />
-                250 points
+                {this.context.globalState.currentAccount.points} points
               </h2>
             </div>
             <p>Choose your prize below</p>
@@ -121,7 +124,7 @@ export default class Redeem extends Component {
               </Col>
             </Row>
 
-            <button className="redeem-btn nunito-font mb-4">Redeem!</button>
+            <button className="prizes-btn nunito-font mb-4">Redeem!</button>
 
             <a href="/logout" className="regular-link pb-5">
               Log Out
@@ -133,3 +136,5 @@ export default class Redeem extends Component {
     );
   }
 }
+
+Prizes.contextType = GlobalContext;
