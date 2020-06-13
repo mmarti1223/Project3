@@ -11,6 +11,7 @@ import SignUp from "./components/SignUp";
 import Login from "./components/Login";
 import AnimalPage from "./components/AnimalPage";
 import QrPage from "./components/QrPage";
+import Scanner from "./components/Scanner";
 import TriviaPage from "./components/TriviaPage";
 import Correct from "./components/Correct";
 import Incorrect from "./components/Incorrect";
@@ -28,7 +29,8 @@ const App = () => {
         <Route path="/signup" component={SignUp} />
         <Route path="/login" component={Login} />
         <Route path="/qrpage" component={QrPage} />
-        <Route path="/animal-page/:id" component={AnimalPage} />
+        <Route path="/scanner" component={Scanner} />
+        <Route path="/animal-page" component={AnimalPage} />
         <Route path="/trivia-page" component={TriviaPage} />
         <Route path="/correct" component={Correct} />
         <Route path="/incorrect" component={Incorrect} />

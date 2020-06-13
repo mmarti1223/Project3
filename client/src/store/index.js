@@ -46,13 +46,14 @@ export const reducer = (state, action) => {
         animals: action.payload,
       };
     case "setCurrentAnimal":
-      const currentAnimal = state.animals.find(
-        // eslint-disable-next-line
-        (animal) => animal.id == action.payload
-      );
+      // const currentAnimal = state.animals.find(
+      //   // eslint-disable-next-line
+      //   (animal) => animal.id == action.payload
+      // );
+      // console.log(currentAnimal);
       return {
         ...state,
-        currentAnimal,
+        currentAnimal: action.payload,
       };
 
     default:
