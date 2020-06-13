@@ -1,47 +1,42 @@
-.redeem .center-div {
-    z-index: 2;
-}
+/* optimized for iphone x */
 .redeem {
-    background-color: #f5f5f5;
-    min-height: 100vh;
-    text-align: center;
+  text-align: center;
+  height: 100vh;
 }
 
-.redeem-icon {
-    width: 45px;
+.redeem .coins {
+  width: 50px;
+  margin-top: 40px;
 }
 
-.points-box {
-    background-color: #ffe15e;
-    border-radius:35px;
+.redeem h2 {
+  font-weight: bold;
+  font-size: 35px;
 }
 
-.prize-item {
-    border-radius:50px;
+.redeem p {
+  font-size: 18px;
 }
 
-.redeem-btn {
-    background-color: #56bc12;
-    width: 180px;
-    display:block;
-    margin: 0 auto;
+.redeem .item {
+  width: 240px;
+  border-radius: 50px;
 }
 
-.yellow-zigzag {
-    height: 15vh;
-    width: 100%;
-    background-image: url("../images/zigzag-yellow.svg");
-    background-repeat: repeat-x;
-    opacity: 0.8;
-    position: fixed;
-    bottom: 0;
-    left:0;
-    z-index: 1;
+.redeem h3 {
+  margin-top: 18px;
+  font-weight: bold;
 }
 
-.checkmark {
-    width: 40px;
-    position: absolute;
-    top:0;
-    right:10px;
+.redeem .bottom {
+  background-image: url("../images/zigzag_yellow.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 60px 20px 40px;
+  position: absolute;
+  bottom: 0;
+}
+
+.redeem .bottom h4 {
+  font-size: 14px;
 }

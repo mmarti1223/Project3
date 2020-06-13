@@ -3,55 +3,57 @@
   width: 100vw;
   background-color: #b61d2f;
   text-align: center;
-}
-
-.incorrect .content {
   min-width: 230px;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-.incorrect .content .top {
-  width: 80%;
-  margin: 0 auto;
-  padding-top: 20px;
-}
-
-.incorrect .content .top img {
+.incorrect .header img {
   width: 40px;
 }
 
-.incorrect .content .top p {
-  font-size: 22px;
+.incorrect .center {
+  border-radius: 50%;
+  width: 250px;
+  padding: 50px;
+  margin: 0 auto;
+  background-color: #79092d;
 }
 
-.incorrect .content .center {
-  width: 100%;
-  -webkit-box-shadow: 0px 0px 47px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 47px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 47px 0px rgba(0, 0, 0, 0.75);
-  padding: 80px;
-}
-
-.incorrect .content .center h2.font-yellow {
-  font-size: 45px;
-}
-
-.incorrect .content .bottom {
-  height: 30vh;
-  width: 100%;
-  background-image: url(../images/animal-spots-red.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  bottom: 0;
+.incorrect .center h2 {
+  margin: 0;
+  font-size: 25px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 }
 
-.incorrect .content .bottom .bttn {
-  color: #b61d2f;
-  font-weight: bold;
-  padding: 15px 50px;
+.incorrect .center .fs-70 {
+  font-size: 70px;
 }
+
+.incorrect .bttn {
+  max-width: 300px;
+  margin: 0 auto;
+  color: #79092d;
+}
+
+/* .incorrect .center,
+.incorrect a {
+  z-index: 2;
+}
+
+.incorrect .pattern-bg {
+  position: absolute;
+  height: 50vh;
+  bottom: 0;
+  left: 0;
+  background-image: url("../images/animal-spots-red.svg");
+  background-size: 20rem;
+  z-index: 1;
+}
+
+.incorrect .pattern-bg img {
+  height: 100%;
+} */

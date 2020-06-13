@@ -23,11 +23,21 @@ export const initialState = {
 export const reducer = (state, action) => {
   switch (action.type) {
     case "addPoints":
-      return {
+      const newState = {
         ...state,
         currentAccount: {
           ...state.currentAccount,
           points: action.payload + state.currentAccount.points,
+        },
+      };
+      return newState;
+    case "updatePoints":
+      localStorage.setItem("points", action.payload);
+      return {
+        ...state,
+        currentAccount: {
+          ...state.currentAccount,
+          points: action.payload,
         },
       };
     case "storeAnimals":
@@ -44,9 +54,10 @@ export const reducer = (state, action) => {
         ...state,
         currentAnimal,
       };
+
     default:
       return state;
-      // break;
+    // break;
   }
 };
 
