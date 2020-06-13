@@ -1,0 +1,47 @@
+.redeem .center-div {
+    z-index: 2;
+}
+.redeem {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.redeem-icon {
+    width: 45px;
+}
+
+.points-box {
+    background-color: #ffe15e;
+    border-radius:35px;
+}
+
+.prize-item {
+    border-radius:50px;
+}
+
+.redeem-btn {
+    background-color: #56bc12;
+    width: 180px;
+    display:block;
+    margin: 0 auto;
+}
+
+.yellow-zigzag {
+    height: 15vh;
+    width: 100%;
+    background-image: url("../images/zigzag-yellow.svg");
+    background-repeat: repeat-x;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    z-index: 1;
+}
+
+.checkmark {
+    width: 40px;
+    position: absolute;
+    top:0;
+    right:10px;
+}

@@ -8,7 +8,7 @@
   width: 80%;
   max-width: 260px;
   z-index: 2;
-  top:75%;
+  /* top:75%; */
 }
 
 .login h1 {

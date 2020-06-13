@@ -1,4 +1,7 @@
 /* Add animal_id before feeding */
+
+USE project3;
+
 INSERT INTO Trivia (question, answer, wrongAnswer, points, animal_id, createdAt, updatedAt) VALUES ('Tigers live in the desert', false, true, 20, 1, now(), now());
 INSERT INTO Trivia (question, answer, wrongAnswer, points, animal_id, createdAt, updatedAt) VALUES ('Female lions are hunters', true, false, 20, 2, now(), now());
 INSERT INTO Trivia (question, answer, wrongAnswer, points, animal_id, createdAt, updatedAt) VALUES ('Gorillas live alone', false, true, 20, 3, now(), now());

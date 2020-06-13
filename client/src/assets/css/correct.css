@@ -25,24 +25,30 @@
 }
 
 .correct .content .center {
-  width: 100%;
-  -webkit-box-shadow: 0px 0px 47px 0px rgba(0, 0, 0, 0.75);
+  width: 20em;
+  height: 20em;
+  /* -webkit-box-shadow: 0px 0px 47px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 47px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 47px 0px rgba(0, 0, 0, 0.75);
-  padding: 80px;
+  padding: 80px; */
+  background-color: #07746c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.correct .content .center h2.font-yellow {
+/* .correct .content .center h2.font-yellow {
   font-size: 45px;
-}
+} */
 
 .correct .content .bottom {
-  height: 30vh;
+  height: 45vh;
   width: 100%;
   background-image: url(../images/animal-spots-green.svg);
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat-x;
+  /* background-size: cover; */
   position: absolute;
   bottom: 0;
   display: flex;
@@ -54,4 +60,16 @@
   color: #b61d2f;
   font-weight: bold;
   padding: 15px 50px;
+}
+
+.center-content {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  margin:0
+}
+
+.larger {
+  font-size:5em;
 }
