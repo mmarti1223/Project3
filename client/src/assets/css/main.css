@@ -23,6 +23,10 @@ h1 {
   color: #fdd329;
 }
 
+.font-red {
+  color: #dd2934;
+}
+
 .center-div {
   position: absolute;
   top: 50%;
