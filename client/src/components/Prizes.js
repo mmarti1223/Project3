@@ -13,6 +13,7 @@ import Popcorn from "../assets/images/popcorn.jpg";
 import Pizza from "../assets/images/pizza.jpg";
 
 import BlueCheckmarkIcon from "../assets/images/checkmark_blue.svg";
+import { Link } from "react-router-dom";
 import { GlobalContext } from "../store";
 
 const Check = () => (
@@ -77,9 +78,8 @@ export default class Prizes extends Component {
                 </h4>
               </Col>
             </Row>
-            <Row className="my-4" onClick={this.toggleHidden.bind(this)}>
+            <Row className="my-4">
               <Col xs={6}>
-                {!this.state.isHidden && <Check />}
                 <img
                   src={Popcorn}
                   alt="popcorn tub"
@@ -100,9 +100,8 @@ export default class Prizes extends Component {
                 </h4>
               </Col>
             </Row>
-            <Row className="my-4" onClick={this.toggleHidden.bind(this)}>
+            <Row className="my-4">
               <Col xs={6}>
-                {!this.state.isHidden && <Check />}
                 <img
                   src={Pizza}
                   alt="pizza slice"
@@ -124,7 +123,12 @@ export default class Prizes extends Component {
               </Col>
             </Row>
 
-            <button className="prizes-btn nunito-font mb-4">Redeem!</button>
+            <button
+              onClick={() => console.log("sub")}
+              className="prizes-btn nunito-font mb-4"
+            >
+              <Link to="/redeem">Redeem!</Link>
+            </button>
 
             <a href="/logout" className="regular-link pb-5">
               Log Out

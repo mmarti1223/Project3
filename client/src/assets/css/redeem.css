@@ -2,11 +2,11 @@
 .redeem {
   text-align: center;
   height: 100vh;
-  padding-top: 130px;
 }
 
 .redeem .coins {
   width: 50px;
+  margin-top: 40px;
 }
 
 .redeem h2 {

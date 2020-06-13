@@ -27,6 +27,10 @@
   margin: 0 auto;
 }
 
+.prizes-btn a {
+  color: #fff;
+}
+
 .yellow-zigzag {
   height: 15vh;
   width: 100%;

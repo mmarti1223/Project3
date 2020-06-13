@@ -1,16 +1,19 @@
 import React from "react";
 import "../assets/css/redeem.css";
+import Navbar from "./HomeNav";
 
 const Redeem = () => {
   return (
     <div className="redeem">
+      <Navbar />
+
       <img
         className="coins"
         src={require("../assets/images/coins_red.svg")}
         alt="drink"
       />
       <h2 className="font-red">Yay!</h2>
-      <p>You have traded 50 points for</p>
+      <p>You have traded 70 points for</p>
 
       <img
         className="item"
